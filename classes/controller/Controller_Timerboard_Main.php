@@ -2,7 +2,7 @@
 /**
  * Main Timerboard controller class.
  */
- use \Model\Timer;
+use \Model\Timer;
 class Controller_Timerboard_Main extends Controller
 {
   public $userlevel = 0;
@@ -21,6 +21,6 @@ class Controller_Timerboard_Main extends Controller
 
   public function post_timer()
   {
-    $timer = new Timer()
+    return Timer::post_timer($data);
   }
 }
