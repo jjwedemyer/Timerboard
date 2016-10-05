@@ -4,25 +4,25 @@
 <div class="content">
   <div class="left_half">
     <ul>
-      <li>Time: <?php echo $timer["time"]; ?></li>
-      <li>Assigned FC: <?php echo $timer["assignee"] ?></li>
-      <li>Importance Rating: <?php echo $timer["importance"]; ?></li>
-      <li>Type of the Target: <?php echo $timer["target_type"]; ?></li>
-      <li>Cycle: <?php echo $timer["cycle"]; ?></li>
-      <li>Allied or Not? <?php echo $timer["allied"]; ?></li>
+      <li>Time: <?php echo $time; ?></li>
+      <li>Assigned FC: <?php echo $assignee; ?></li>
+      <li>Importance Rating: <?php echo $importance; ?></li>
+      <li>Type of the Target: <?php echo $target_type; ?></li>
+      <li>Cycle: <?php echo $cycle; ?></li>
+      <li>Allied or Not? <?php echo $allied; ?></li>
     </ul>
   </div>
   <div class="right_half">
     <ul>
-      <li>System: <?php echo $timer["system"]; ?></li>
-      <?php if($timer["target_type"] == "POS") echo<<<EOT
-        <li>Planet: $timer["planet"]</li>
-        <li>Moon: $timer["moon"]</li>
+      <li>System: <?php echo $system; ?></li>
+      <?php if($target_type == "POS") echo<<<EOT
+        <li>Planet: $planet</li>
+        <li>Moon: $moon</li>
       EOT;
       ?>
-      <li>Creator: <?php echo $timer["creator"] ?></li>
-      <li>Creation time: <?php echo $timer["create_time"] ?></li>
-      <li>Comments:<br><?php echo $timer["comments"] ?></li>
+      <li>Creator: <?php echo $creator; ?></li>
+      <li>Creation time: <?php echo $create_time; ?></li>
+      <li>Comments:<br><?php echo $comments; ?></li>
     </ul>
   </div>
 </div>
