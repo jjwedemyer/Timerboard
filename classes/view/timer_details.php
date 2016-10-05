@@ -4,7 +4,7 @@
 <div class="content">
   <div class="left_half">
     <ul>
-      <li>Time: <?php echo $time; ?></li>
+      <li>Time: <span id="countdown" data-time="<?= $time?>"></span></li>
       <li>Assigned FC: <?php echo $assignee; ?></li>
       <li>Importance Rating: <?php echo $importance; ?></li>
       <li>Type of the Target: <?php echo $target_type; ?></li>
@@ -26,3 +26,11 @@
     </ul>
   </div>
 </div>
+
+<!-- js script herefor
+var time = new Date($(#countdown).data("time"));
+$("#countdown").innerHTML = countdown(time).toString();
+setInterval(function(){
+  $("#countdown").innerHTML = countdown(time).toString();
+},1000);
+-->

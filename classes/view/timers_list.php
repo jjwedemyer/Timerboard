@@ -18,7 +18,7 @@
     <?php foreach ($timers as $timer): ?>
     <tr class="clickable-row" data-href="/timers/timer/<?php echo $timer["id"]; ?>">
       <!-- TODO: time countingdown js -->
-      <td><?php echo $timer["time"]; ?></td>
+      <td><span id="time-select<?=id?>" data-time="<?= $timer["time"]; ?>"></span></td>
       <td><?php echo $timer["importance"]; ?></td>
       <td><?php echo $timer["target_type"]; ?></td>
       <td id="cycle_field"><?php echo $timer["cycle"]; ?></td>
@@ -33,11 +33,16 @@
 </div>
 
 <!-- timer handler
-jQuery(document).ready(function($) {
+jQuery(document).ready(function() {
     $(".clickable-row").click(function() {
         window.document.location = $(this).data("href");
     });
 });
+$("#time-select").each(function(){
+  $("#time-select").innerHTML = countdown(new Date($("#time-select").data("time"))).toString();
+  setInterval(function(){$("#time-select").innerHTML = countdown(new Date($("#time-select").data("time"))).toString();},1000);
+}
+)
 
 sorting plug
 http://tablesorter.com/docs/

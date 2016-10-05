@@ -28,7 +28,7 @@ class Timer extends \Model
   }
 
   function get_timer($id=null){
-    if(isNull(id)) return something;
+    if(isNull(id)) return "something";
     $sql = "SELECT * FROM timers WHERE id IS $id";
     return DB::query($sql);
   }
