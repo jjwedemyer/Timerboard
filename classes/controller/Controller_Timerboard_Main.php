@@ -19,7 +19,7 @@ class Controller_Timerboard_Main extends Controller
   public function action_index()
   {
     if($userlevel < 1) {return View::forge('opsec_view');}
-    $data = Timer::get_timers();
+    $data["timers"] = Timer::get_timers();
     // TODO: possible transformations of data
     return View::forge('timers_list',$data);
   }

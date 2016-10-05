@@ -1,5 +1,5 @@
 <div id="content-header">
-  <h1 class="content-header">Timer Details #<?php echo $timer[id];?></h1>
+  <h1 class="content-header">Timer Details #<?php echo $id;?></h1>
 </div>
 <div class="content">
   <div class="left_half">
