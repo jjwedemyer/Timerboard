@@ -11,11 +11,11 @@
     <ul>
     <li>
       <div class="left">Time</div>
-      <div class="right"><input type="text" name="time" value=""></div>
+      <div class="right"><input type="text" name="formdata_time" value=""></div>
     </li>
     <li>
       <div class="left">Importance</div>
-      <div class="right"><input list="importance" name="importance" value="">
+      <div class="right"><input list="importance" name="formdata_importance" value="">
         <datalist id="importance">
           <option value="Highly Strategic, CTA target">
           <option value="Strategic Importance, StratOP">
@@ -25,7 +25,7 @@
     </li>
     <li>
       <div class="left">Target's Type </div>
-      <div class="right"><input list="target_type">
+      <div class="right"><input name="formdata_target_type" list="target_type" value="">
         <datalist id="target_type">
           <option value="astrahus">
           <option value="fortizar">
@@ -41,7 +41,7 @@
     </li>
     <li>
       <div class="left">Cycle </div>
-      <div class="right"><select class="" name="cycle">
+      <div class="right"><select class="" name="formdata_cycle">
         <option value="shield">Shield</option>
         <option value="armor">Armor</option>
         <option value="final">final</option>
@@ -49,11 +49,11 @@
     </li>
     <li>
       <div class="left">Allied: </div>
-      <div class="right"><input type="checkbox" name="allied" value=""></div>
+      <div class="right"><input type="checkbox" name="formdata_allied" value=""></div>
     </li>
     <li>
       <div class="left">Assigned FC: </div>
-      <div class="right"><input type="text" name="assignee" value=""></div>
+      <div class="right"><input type="text" name="formdata_assignee" value=""></div>
     </li>
     <li>
       <div class="left">System:
@@ -61,14 +61,14 @@
                     <br>Moon:
       </div>
       <div class="right">
-        <input type="text" name="system" value="">
-        <input type="text" name="planet" value="">
-        <input type="text" name="moon" value="">
+        <input type="text" name="formdata_system" value="">
+        <input type="text" name="formdata_planet" value="">
+        <input type="text" name="formdata_moon" value="">
       </div>
     </li>
     <li>
       <div class="left">Comments:</div>
-      <div class="right"><textarea name="comments" class="form-control" rows="10"></textarea></div>
+      <div class="right"><textarea name="formdata_comments" class="form-control" rows="10"></textarea></div>
     </li>
     <li><input type="submit" value="Submit Timer!"></li>
     </ul>

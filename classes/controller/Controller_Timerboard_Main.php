@@ -40,8 +40,15 @@ class Controller_Timerboard_Main extends Controller
   /**
   * Designed to create new Timers;
   */
-  public function post_timer($data)
+  public function post_timer()
   {
+    $data = array();
+    $post = Input::post();
+    foreach ($post as $key => $value) {
+      if(strpos($value,"formdata_") !== false){
+        $data[$key] = $value;
+      }
+    }
     return Timer::create_timer($data);
   }
 
