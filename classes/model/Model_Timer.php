@@ -1,3 +1,7 @@
+<!-- Copyright:
+  Intellectual property of Jakob Wedemeyer  github.com/jjwedemyer
+  2016
+ -->
 <?php
 /**
  * Timer Data model
@@ -13,7 +17,7 @@ class Timer extends \Model
     }
     if (!isNull($timeframe)){
       // select statement
-      $timers = DB::query('SELECT * FROM timers WHERE time < $timeframe["last"] AND time > $timeframe["first"];');
+      $timers = DB::query("SELECT * FROM timers WHERE time BETWEEN $timeframe['first'] AND $timeframe['last'];");
     }
     return $timers;
   }
@@ -30,6 +34,12 @@ class Timer extends \Model
   function get_timer($id=null){
     if(isNull(id)) return "something";
     $sql = "SELECT * FROM timers WHERE id IS $id";
+    return DB::query($sql);
+  }
+
+  function get_region($system){
+    $system = mysqli_real_escape_string($system);
+    $sql = "SELECT regionName FROM mapRegions INNER JOIN mapSolarSystems ON mapRegions.regionID = mapSolarSystems.regionID WHERE mapSolarSystems.solarSystemName LIKE '$system';";
     return DB::query($sql);
   }
 

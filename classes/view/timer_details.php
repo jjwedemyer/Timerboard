@@ -1,3 +1,7 @@
+<!-- Copyright:
+  Intellectual property of Jakob Wedemeyer  github.com/jjwedemyer
+  2016
+ -->
 <div id="content-header">
   <h1 class="content-header">Timer Details #<?php echo $id;?></h1>
 </div>

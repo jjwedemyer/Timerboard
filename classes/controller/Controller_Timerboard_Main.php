@@ -1,3 +1,7 @@
+<!-- Copyright:
+  Intellectual property of Jakob Wedemeyer  github.com/jjwedemyer
+  2016
+ -->
 <?php
 /**
  * Main Timerboard controller class.
@@ -20,8 +24,17 @@ class Controller_Timerboard_Main extends Controller
   {
     if($userlevel < 1) {return View::forge('opsec_view');}
     $data["timers"] = Timer::get_timers();
+    $timers = array_map('region_map',array_values($data['timers'])); // no clue if this works
     // TODO: possible transformations of data
     return View::forge('timers_list',$data);
+  }
+
+  /**
+  * helper to create map
+  */
+  function region_map($timer){
+    $timer['region'] = Timer::get_region($timer['system']);
+    return $timer;
   }
 
   /**
@@ -29,7 +42,7 @@ class Controller_Timerboard_Main extends Controller
   */
   public function post_timer()
   {
-    return Timer::post_timer($data);
+    return Timer::create_timer($data);
   }
 
   /**
