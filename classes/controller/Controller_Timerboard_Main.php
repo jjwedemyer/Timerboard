@@ -15,6 +15,7 @@ class Controller_Timerboard_Main extends Controller
     if (1==1) {
       $userlevel = 1;
     }
+    if($userlevel < 1) {return View::forge('opsec_view');}
   }
 
   /**
@@ -22,7 +23,6 @@ class Controller_Timerboard_Main extends Controller
   */
   public function action_index()
   {
-    if($userlevel < 1) {return View::forge('opsec_view');}
     $data["timers"] = Timer::get_timers();
     $timers = array_map('region_map',array_values($data['timers'])); // no clue if this works
     // TODO: possible transformations of data
@@ -40,9 +40,16 @@ class Controller_Timerboard_Main extends Controller
   /**
   * Designed to create new Timers;
   */
-  public function post_timer()
+  public function post_timer($data)
   {
     return Timer::create_timer($data);
+  }
+
+  /**
+  *
+  */
+  public function action_post_timer(){
+    return View::forge('timer_create');
   }
 
   /**
