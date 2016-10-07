@@ -23,6 +23,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "classes/controller/Controller_Timerboard_Main.php",
+			"settings":
+			{
+				"buffer_size": 1423,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/model/Model_Timer.php",
+			"settings":
+			{
+				"buffer_size": 1288,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -31,10 +48,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 181.0,
-		"last_filter": "install",
+		"height": 258.0,
+		"last_filter": "install ",
 		"selected_items":
 		[
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -68,7 +89,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 471.0
+		"width": 561.0
 	},
 	"console":
 	{
@@ -82,19 +103,25 @@
 	{
 		"menu_visible": true,
 		"show_minimap": false,
-		"show_open_files": false,
+		"show_open_files": true,
 		"show_tabs": false,
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
 	"expanded_folders":
 	[
-		"/Users/jj_wedemeyer/.oh-my-zsh",
-		"/Users/jj_wedemeyer/.oh-my-zsh/tools",
-		"/Users/jj_wedemeyer/eve/Timerboard"
+		"/Users/jj_wedemeyer/eve/Timerboard",
+		"/Users/jj_wedemeyer/eve/Timerboard/classes",
+		"/Users/jj_wedemeyer/eve/Timerboard/classes/controller",
+		"/Users/jj_wedemeyer/eve/Timerboard/classes/view",
+		"/Users/jj_wedemeyer/eve/Timerboard/config",
+		"/Users/jj_wedemeyer/eve/Timerboard/lang",
+		"/Users/jj_wedemeyer/eve/Timerboard/tasks",
+		"/Users/jj_wedemeyer/eve/Timerboard/views"
 	],
 	"file_history":
 	[
+		"/Users/jj_wedemeyer/eve/Timerboard/README.md",
 		"/Users/jj_wedemeyer/LearnC/lol.c",
 		"/Users/jj_wedemeyer/LearnC/oO.c",
 		"/Users/jj_wedemeyer/Library/Application Support/Sublime Text 3/Packages/Clang Format/clang_format.sublime-settings",
@@ -134,8 +161,77 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "classes/controller/Controller_Timerboard_Main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "classes/model/Model_Timer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								279,
+								279
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -156,11 +252,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -221,9 +324,9 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":

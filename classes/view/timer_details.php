@@ -22,9 +22,9 @@
       <li>Cycle: {{cycle}}</li>
       <li>
         {% if allied %}
-          <i class="fa fa-check text-green" data-toggle="tooltip" data-original-title="Character owns this hull."></i><span> Allied!</span>
+          <i class="fa fa-check text-green"></i><span> Allied!</span>
         {% else %}
-          <i class="fa fa-times text-red" data-toggle="tooltip" data-original-title="Character doesn't own this hull."></i><span> Hostile!</span>
+          <i class="fa fa-times text-red"></i><span> Hostile!</span>
         {% endif %}
       </li>
     </ul>
