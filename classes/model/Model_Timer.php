@@ -6,6 +6,7 @@
 /**
  * Timer Data model
  */
+namespace Timerboard;
 class Timer extends \Model
 {
 
