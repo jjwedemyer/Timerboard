@@ -17,7 +17,8 @@ class Timer extends \Model
     }
     if (!isNull($timeframe)){
       // select statement
-      $timers = DB::query("SELECT * FROM timers WHERE time BETWEEN $timeframe['first'] AND $timeframe['last'];");
+      $sql = "SELECT * FROM timers WHERE time BETWEEN $timeframe[first] AND $timeframe[last];";
+      $timers = DB::query($sql);
     }
     return $timers;
   }

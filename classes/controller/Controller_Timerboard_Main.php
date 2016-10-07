@@ -7,15 +7,14 @@
  * Main Timerboard controller class.
  */
 use \Model\Timer;
+use \Auth;
 class Controller_Timerboard_Main extends Controller
 {
   public $userlevel = 0;
   public function before()
   {
-    if (1==1) {
-      $userlevel = 1;
-    }
-    if($userlevel < 1) {return View::forge('opsec_view');}
+    
+    if(!Auth::has_access(timer.fc)) {return View::forge('opsec_view');}
   }
 
   /**
