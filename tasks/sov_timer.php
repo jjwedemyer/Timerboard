@@ -26,8 +26,10 @@ class sov_timer
 
   public function json2timer($json)
   {
-    $structure_types = array('1' =>"Territorial Claim Unit" , '2'=> "Infrastructure Hub",'3'=>"Station");
-    $timer = array('creator' => "SkyNet" , 'time' => strtotime($json->startTime) , 'assignee' => null , 'importance' => 0 ,'target_type'=> $structure_types[$json->eventType] , 'cycle'=>"Final" , 'allied'=>/*TODO*/ , 'system'=> $json->sourceSolarsystem->name);
+    $structure_types = array('1'=>"Territorial Claim Unit" , '2'=>"Infrastructure Hub",'3'=>"Station");
+    $allied_alliances = DB::query();
+    $allied = in_array($json->defender->defender->id, $allied_alliances);
+    $timer = array('creator' => "SkyNet" , 'time' => strtotime($json->startTime) , 'assignee' => null , 'importance' => 0 ,'target_type'=> $structure_types[$json->eventType] , 'cycle'=>"Final" , 'allied'=>$allied , 'system'=> $json->sourceSolarsystem->name);
     return $timer;
   }
 }
