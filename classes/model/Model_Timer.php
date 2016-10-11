@@ -3,10 +3,10 @@
   2016
  -->
 <?php
+namespace Timerboard;
 /**
  * Timer Data model
  */
-namespace Timerboard;
 class Timer extends \Model
 {
 

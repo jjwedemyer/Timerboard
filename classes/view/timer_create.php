@@ -6,6 +6,7 @@
 
 {% block stylesheets %}
 {{ asset_css('selene.css') }}
+<script type="text/javascript" src="//malsup.github.com/jquery.form.js"></script>
 {% endblock %}
 
 {% block content %}

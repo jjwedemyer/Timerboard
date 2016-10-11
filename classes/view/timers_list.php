@@ -6,6 +6,7 @@
 
 {% block stylesheets %}
 {{ asset_css('selene.css') }}
+<script type="text/javascript" src="//github.com/christianbach/tablesorter/blob/master/jquery.tablesorter.min.js"></script> 
 {% endblock %}
 
 {% block content %}
@@ -28,7 +29,6 @@
     <tbody>
     {% for t in timers %}
     <tr class="clickable-row" data-href="/timers/timer/{{t.id}}">
-      <!-- TODO: time countingdown js -->
       <td><span class="time-select" data-time="{{t.time}}"></span></td>
       <td>{{t.importance}}</td>
       <td>{{t.target_type}}</td>
