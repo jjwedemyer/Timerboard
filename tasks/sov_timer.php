@@ -2,7 +2,7 @@
 namespace Timerboard\Tasks;
 
 /**
- * Sov timer import class
+ * Sov timer import task class
  */
 use Timerboard\Model\Timer;
 class sov_timer
